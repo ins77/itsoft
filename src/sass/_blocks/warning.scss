@@ -1,0 +1,23 @@
+.warning {
+  font-size: 3vw;
+  font-family: "Open Sans Cond";
+  line-height: 1.25;
+  color: #b6b6b6;
+  text-transform: uppercase;
+  text-align: center;
+  box-shadow: inset 0 14px 14px -14px rgba(#005494, .65);
+  &__text {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
+@media (max-width: 980px) {
+  .warning {
+    font-size: 3.5vw;
+    &__text {
+      padding-top: 1.8em;
+      padding-bottom: 1.8em;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+mixin modal
+  +b.modal.js-modal.js-modal-question
+    +b.FORM.form.js-form
+      +b.LABEL.label Ваше имя:
+        +b.INPUT.input(type="text", placeholder="Имя", data-required="true")
+      +b.LABEL.label Ваш email:
+        +b.INPUT.input(type="text", placeholder="Email", data-required="email")
+      +b.LABEL.label Ваш номер телефона:
+        +b.INPUT.input(type="text", placeholder="89263473604", data-required="phone")
+      +b.LABEL.label Ваш вопрос:
+        +b.TEXTAREA.textarea(placeholder="Вопрос", data-required="true")
+      +b.BUTTON.btn.--alt.--small(type="submit") Отправить
+    +e.BUTTON.exit.js-modal-exit X

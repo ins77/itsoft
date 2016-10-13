@@ -1,0 +1,152 @@
+.features {
+  @include clearfix;
+  color: #fff;
+}
+
+.feature {
+  position: relative;
+  float: left;
+  width: 50%;
+  height: 500px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 320px auto;
+  &:hover,
+  &:active,
+  &:focus {
+    .feature__title {
+      display: none;
+    }
+
+    .feature__problem,
+    .feature__complex {
+      display: block;
+    }
+  }
+
+  &--fatigue {
+    background-image: url("../img/eye1.svg");
+    background-position: calc(50% - 20px) calc(50% - 60px);
+    background-color: #4282ad;
+    &:hover,
+    &:active,
+    &:focus {
+      background-image: url("../img/eye1-hover.svg");
+    }
+  }
+
+  &--vessels {
+    background-image: url("../img/eye2.svg");
+    background-color: #cd5463;
+    &:hover,
+    &:active,
+    &:focus {
+      background-image: url("../img/eye2-hover.svg");
+    }
+  }
+
+  &--protect {
+    background-image: url("../img/eye3.svg");
+    background-color: #2bb673;
+    &:hover,
+    &:active,
+    &:focus {
+      background-image: url("../img/eye3-hover.svg");
+    }
+  }
+
+  &--age {
+    background-image: url("../img/eye4.svg");
+    background-color: #fbb040;
+    &:hover,
+    &:active,
+    &:focus {
+      background-image: url("../img/eye4-hover.svg");
+    }
+  }
+
+  &__title {
+    position: absolute;
+    top: 38px;
+    left: 25px;
+    right: 25px;
+    font-size: 1.14rem;
+    line-height: 1.5;
+    text-transform: uppercase;
+  }
+
+  &__problem {
+    display: none;
+    position: absolute;
+    font-size: 1.5rem;
+    color: rgba(#fff, .7);
+    &--fatigue {
+      left: 55%;
+      top: 13%;
+    }
+  }
+
+  &__complex {
+    display: none;
+    position: absolute;
+    left: 25px;
+    bottom: 25px;
+  }
+
+  &__complex-item {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 20px;
+    &:hover {
+      z-index: 10;
+      .feature__complex-text {
+        display: block;
+      }
+    }
+  }
+
+  &__complex-text {
+    display: none;
+    position: absolute;
+    left: 30%;
+    top: 50%;
+    margin-top: -20px;
+    height: 40px;
+    padding: 10px 22px 0;
+    font-size: .93rem;
+    color: #005494;
+    background: #fff;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+}
+
+@media (min-width: 1030px) and (max-width: 1225px) {
+  .feature {
+    height: auto;
+    &::before {
+      content: "";
+      display: block;
+      padding-top: 100%;
+    }
+  }
+}
+
+@media (max-width: 1029px) {
+  .feature {
+    height: 402px;
+  }
+}
+
+@media (max-width: 790px) {
+  .feature {
+    float: none;
+    width: 100%;
+    &__problem {
+      &--fatigue {
+        top: 6%;
+      }
+    }
+  }
+}

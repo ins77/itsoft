@@ -1,0 +1,24 @@
+-
+  var socialItems = [
+    {
+      name: "fb",
+      link: "fb.com",
+      mod: "--fb"
+    },
+    {
+      name: "twitter",
+      link: "tw.com",
+      mod: "--twitter"
+    },
+    {
+      name: "skype",
+      link: "skype:ins25?call",
+      mod: "--skype"
+    }
+  ]
+
+mixin social
+  +b.UL.social
+    each item in socialItems
+      +e.LI.item
+        +e.A.link(href=item.link, class="social__link" + item.mod) #{item.name}

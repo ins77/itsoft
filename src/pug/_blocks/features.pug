@@ -1,0 +1,20 @@
+-
+  var featuresItems = [
+   {
+     modName: "--fatigue"
+   },
+   {
+     modName: "--vessels"
+   },
+   {
+     modName: "--protect"
+   },
+   {
+     modName: "--age"
+   }
+  ]
+
+mixin features
+  +b.features
+    each item in featuresItems
+      +feature(item.modName)
